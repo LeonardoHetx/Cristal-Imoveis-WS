@@ -9,10 +9,9 @@
 }
 
 :root {
-  color: rgb(35, 38, 43);
   --hue: 353;
   --hue-s: 355;
-  --primary-color: hsl(var(--hue-s), 87%, 37%);
+  --primary-color: hsl(var(--hue), 87%, 37%);
   --secondary-color: hsl(var(--hue), 46%, 32%);
 
   --headline: hsl(calc(var(--hue) - 10), 14%, 97%);
@@ -215,7 +214,9 @@ nav .close-menu {
 }
 
 nav.scroll {
+  box-sizing: border-box;
   background: var(--bg-gradient);
+  border-bottom: 1px solid var(--primary-color);
 }
 
 nav.scroll button.open-menu path {
@@ -359,7 +360,12 @@ body.menu-expanded button path {
 }
 
 #home .col-b{
+  max-width: 60rem;
   position: relative;
+}
+
+#home .col-b .glider{
+  overflow: hidden;
 }
 
 #home .col-b::before {
@@ -384,15 +390,6 @@ body.menu-expanded button path {
   bottom: -2rem;
   border-right: 3px solid var(--primary-color);
   border-bottom: 3px solid var(--primary-color);
-}
-
-#home .col-b .logo-markup{
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  left: 5rem;
-  top: 5rem;
-  z-index: 1;
 }
 
 #home .stats {
@@ -676,8 +673,7 @@ footer .social-links {
   }
 
   nav#navigation .logo img {
-    margin-top: 1rem;
-
+    transform: translateY(5%);
   }
 
   nav#navigation .menu ul:nth-child(1) {

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="api/Glider.js-master/glider.min.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
@@ -17,7 +18,7 @@
   <nav id="navigation">
     <div class="wrapper">
       <a class="logo" onclick="closeMenu()" href="#home">
-        <img src="assets/logocristalimoveisvetorX.png" alt="Cristal Imóveis Logo" style="width: 150px;">
+        <img src="assets/logos/logocristalimoveisvetorX.png" alt="Cristal Imóveis Logo" style="width: 150px; height: 55px;">
       </a>
       <div class="menu">
         <ul>
@@ -85,8 +86,18 @@
         </div>
       </div>
       <div class="col-b">
-        <img class="logo-markup" src="assets/logocristalvetor.png" alt="Logo Cristal Imóveis">
-        <img src="assets/light-home-background.png" alt="Cristal Imóveis Logo">
+        <div class="glider-contain">
+          <div class="glider">
+            <div><img src="assets/backgrounds/light-home-background.png" alt="light home background image"></div>
+            <div><img src="assets/backgrounds/home-room-background.jpg" alt="home room background image"></div>
+            <div><img src="assets/backgrounds/home-design-background.jpg" alt="home design background image"></div>
+            <div><img src="assets/backgrounds/red-house-background.jpg" alt="red house background image"></div>
+          </div>
+        
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <button aria-label="Next" class="glider-next">»</button>
+          <div role="tablist" class="dots"></div>
+        </div>
       </div>
       <div class="col-c">
         <div class="stats">
@@ -270,6 +281,7 @@
     </svg>
   </a>
   <!-- Scroll Reveal Lib-->
+  <script src="api/Glider.js-master/glider.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./main.js"></script>
 </body>
