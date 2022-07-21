@@ -216,7 +216,6 @@ nav .close-menu {
 nav.scroll {
   box-sizing: border-box;
   background: var(--bg-gradient);
-  border-bottom: 1px solid var(--primary-color);
 }
 
 nav.scroll button.open-menu path {
@@ -377,7 +376,7 @@ body.menu-expanded button path {
   left: -2rem;
   top: -2rem;
   border-left: 3px solid var(--primary-color);
-  border-top: 3px solid var(--primary-color);
+  border-top: 3px solid var(--secondary-color);
 }
 
 #home .col-b::after {
@@ -389,7 +388,7 @@ body.menu-expanded button path {
   right: -2rem;
   bottom: -2rem;
   border-right: 3px solid var(--primary-color);
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 3px solid var(--secondary-color);
 }
 
 #home .stats {

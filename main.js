@@ -1,15 +1,59 @@
 //GLIDER.JS INITIALIZER
-window.addEventListener('load', function(){
-   new Glider(document.querySelector('.glider'), {
+
+ var slider =  new Glider(document.querySelector('.glider'), {
       slidesToShow: 1,
-      dots: '#dots',
+      slidesToScroll: 1,
+      scrollLock: true,
+      scrollLockDelay: 100,
       draggable: true,
+      dragVelocity: 1.5,
+      duration: 3,
       arrows: {
         prev: '.glider-prev',
         next: '.glider-next'
       }
     });
- })
+
+    //GLIDER.JS AUTOPLAY
+
+    slideAutoPlay(slider, '#home .col-b');
+
+    function slideAutoPlay(glider, selector, delay = 5000, repeat = true) {
+        let autoplay = null;
+        const slidesCount = glider.track.childElementCount;
+        let nextIndex = 1;
+        let pause = true;
+    
+        function slide() {
+            autoplay = setInterval(() => {
+                if (nextIndex >= slidesCount) {
+                    if (!repeat) {
+                        clearInterval(autoplay);
+                    } else {
+                        nextIndex = 0;
+                    }
+                }
+                glider.scrollItem(nextIndex++);
+            }, delay);
+        }
+    
+        slide();
+    
+        var element = document.querySelector(selector);
+        element.addEventListener('mouseover', (event) => {
+            if (pause) {
+                clearInterval(autoplay);
+                pause = false;
+            }
+        }, 300);
+    
+        element.addEventListener('mouseout', (event) => {
+            if (!pause) {
+                slide();
+                pause = true;
+            }
+        }, 300);
+    }
 
 //TO CHECK WHICH SECTION YOU ARE IN
 window.addEventListener('scroll', onScroll)
@@ -85,8 +129,7 @@ ScrollReveal({
    distance: '80px',
    duration: 1000
 }).reveal(`
-   #homeToScroll , 
-   #homeToScroll img, 
+   #homeToScroll ,
    #homeToScroll .stat`)
 
 ScrollReveal({
