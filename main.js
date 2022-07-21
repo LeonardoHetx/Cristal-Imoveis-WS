@@ -127,9 +127,9 @@ function closeMenu() {
 ScrollReveal({
    origin: 'left',
    distance: '80px',
-   duration: 1000
+   duration: 1200
 }).reveal(`
-   #homeToScroll ,
+   #homeToScroll,
    #homeToScroll .stat`)
 
 ScrollReveal({

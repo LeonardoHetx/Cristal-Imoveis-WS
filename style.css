@@ -320,7 +320,6 @@ body.menu-expanded button path {
   width: 100%;
   height: 95rem;
   background-size: cover;
-  /* background-color: var(--brand-light); */
   display: block;
   position: absolute;
   top: 0;
@@ -350,6 +349,102 @@ body.menu-expanded button path {
   color: var(--paragraph);
   margin-bottom: 3.2rem;
 }
+
+/* SEARCH BOX START */
+
+#home .search-box{
+  margin-top: 3.2rem;
+  height:20rem;
+}
+
+#home .search{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  padding: 2rem 0 2rem 6rem;
+  min-height: 6rem;
+  width: 70%;
+  background-color: var(--headline);
+  border-radius: 2rem;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  z-index: 10;
+}
+
+/* #home .search .icon{
+  position: absolute;
+  top: 50%;
+  left: 2.5rem;
+  transform: translateY(-50%);
+} */
+
+/* #home .search .icon svg path{
+  fill: var(--bg-light);
+} */
+
+#home .search .row{
+  display: flex;
+}
+
+#home .search .row .option{
+  flex: 1;
+  /* position: relative;
+  padding: 0;
+  border-right: 2px solid var(--bg-light); */
+}
+
+/* #home .search .row .option:not(:last-child)::before{
+  content: '';
+  background-image: url(assets/expand-arrow.png);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-60%);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+} */
+
+/* #home .search .row .option select{
+  position: relative;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  color: var(--bg-light);
+  padding: 10px 20px;
+  width: 100%;
+  background-color: transparent;
+  appearance: none;
+} */
+
+/* #home .search .row .option:last-child{
+  padding: 0 20px;
+  border-right: none;
+  box-sizing: border-box;
+} */
+
+/* #home .search .row .option input[type="submit"]{
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+  color: var(--paragraph);
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color .3s;
+
+} */
+
+/* #home .search .row .option input[type="submit"]:hover{
+  background-color: var(--secondary-color);
+} */
+
+/* SEARCH BOX END */
 
 #home img {
   width: 26.4rem;
@@ -601,7 +696,7 @@ footer .social-links {
   /*==== GERAL ======================= */
 
   body {
-    overflow: auto;
+    overflow-x: hidden;
   }
 
   .wrapper {
