@@ -129,8 +129,7 @@ ScrollReveal({
    distance: '80px',
    duration: 1200
 }).reveal(`
-   #homeToScroll,
-   #homeToScroll .stat`)
+   #homeToScroll`)
 
 ScrollReveal({
    origin: 'top',

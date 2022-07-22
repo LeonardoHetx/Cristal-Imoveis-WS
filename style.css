@@ -364,7 +364,7 @@ body.menu-expanded button path {
   transform: translateY(-50%);
   padding: 2rem 0 2rem 6rem;
   min-height: 6rem;
-  width: 70%;
+  width: 80%;
   background-color: var(--headline);
   border-radius: 2rem;
   box-sizing: border-box;
@@ -372,16 +372,16 @@ body.menu-expanded button path {
   z-index: 10;
 }
 
-/* #home .search .icon{
+#home .search .icon{
   position: absolute;
   top: 50%;
   left: 2.5rem;
   transform: translateY(-50%);
-} */
+}
 
-/* #home .search .icon svg path{
+#home .search .icon svg path{
   fill: var(--bg-light);
-} */
+}
 
 #home .search .row{
   display: flex;
@@ -389,43 +389,43 @@ body.menu-expanded button path {
 
 #home .search .row .option{
   flex: 1;
-  /* position: relative;
+  position: relative;
   padding: 0;
-  border-right: 2px solid var(--bg-light); */
+  border-right: 2px solid var(--bg-light);
 }
 
-/* #home .search .row .option:not(:last-child)::before{
+#home .search .row .option:not(:last-child)::before{
   content: '';
   background-image: url(assets/expand-arrow.png);
+  background-size: 15px;
+  background-repeat: no-repeat;
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-60%);
-  background-size: 20px;
-  background-repeat: no-repeat;
+  transform: translateY(-40%);
   width: 20px;
   height: 20px;
-} */
+}
 
-/* #home .search .row .option select{
+#home .search .row .option select{
   position: relative;
   border: none;
   outline: none;
-  font-size: 24px;
+  font-size: 2rem;
   color: var(--bg-light);
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   width: 100%;
   background-color: transparent;
   appearance: none;
-} */
+}
 
-/* #home .search .row .option:last-child{
+#home .search .row .option:last-child{
   padding: 0 20px;
   border-right: none;
   box-sizing: border-box;
-} */
+}
 
-/* #home .search .row .option input[type="submit"]{
+#home .search .row .option input[type="submit"]{
   border: none;
   border-radius: 2rem;
   background-color: var(--primary-color);
@@ -437,12 +437,11 @@ body.menu-expanded button path {
   font-size: 20px;
   font-weight: 600;
   transition: background-color .3s;
+}
 
-} */
-
-/* #home .search .row .option input[type="submit"]:hover{
+#home .search .row .option input[type="submit"]:hover{
   background-color: var(--secondary-color);
-} */
+}
 
 /* SEARCH BOX END */
 
