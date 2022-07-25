@@ -134,8 +134,8 @@ ScrollReveal({
 
 ScrollReveal({
    origin: 'top',
-   distance: '80px',
-   duration: 700
+   distance: '100px',
+   duration: 1000
 }).reveal(` 
    #services,
    #services header,
