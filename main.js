@@ -145,29 +145,6 @@ ScrollReveal({
    #about .content,
    #about .content img`)
 
-//#HOME .STATS COUNTER
-
-function toCount(x, b, a, c) {
-   let n1 = 0
-   let count = setInterval(() => {
-      var numbersHome = document.getElementsByClassName('count')[a].innerText = `+${n1 += b}`
-      if (n1 === x) {
-         clearInterval(count)
-      }
-      textAppear(a)
-   }, c)
-}
-
-//puts visibility in texts
-function textAppear(a) {
-   document.getElementsByClassName('count')[a].classList.remove('appear')
-}
-
-// toCount(number in text, how often, number position in class list, time to count)
-toCount(3500, 100, 0, 20)
-toCount(15, 1, 1, 70)
-
-
 //#DEPOSITIONS ARROW PREV AND NXT
 
 let arrow = document.getElementsByClassName('arrow')
