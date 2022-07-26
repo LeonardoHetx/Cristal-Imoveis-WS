@@ -130,20 +130,26 @@ ScrollReveal({
    duration: 1400
 }).reveal(`
    #homeToScroll,
-   #homeToScroll .stat`)
+   #homeToScroll header,
+   #homeToScroll .content,
+   #homeToScroll img,
+   #contact .map`)
 
 ScrollReveal({
    origin: 'top',
    distance: '100px',
    duration: 1000
-}).reveal(` 
+}).reveal(`
+   #properties,
    #services,
    #services header,
    #services .card,
    #about,
    #about header,
    #about .content,
-   #about .content img`)
+   #about .content img,
+   #contact header,
+   #contact .content`)
 
 //#DEPOSITIONS ARROW PREV AND NXT
 
