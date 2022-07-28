@@ -504,26 +504,6 @@ body.menu-expanded button path {
   flex-wrap: wrap;
 }
 
-.properties_img-box{
-  position: relative;
-
-  height: 30.5rem;
-}
-
-.properties_img-box ul{
-  position: absolute;
-  width: 100%;
-  background-color: var(--primary-color);
-  bottom: 1%;
-}
-
-.properties_img-box ul li{
-  border: solid red;
-  width: 100;
-  position: absolute;
-  left: 0;
-}
-
 .properties_img{
   width: 34rem;
   height: 30rem;
@@ -574,9 +554,15 @@ article.rented::before{
   margin-bottom: 5rem;
 }
 
-#properties .properties_info{
+#properties .properties_detail{
   margin-top: 1.2rem;
-  background-color: var(--brand-light);
+  border: solid blue;
+  width: 100%;
+  height: 7rem;
+}
+
+#properties .properties_detail ul li{
+
 }
 
 /*==== SERVICES ============================================ */
@@ -744,6 +730,7 @@ article.rented::before{
 }
 
 #contact ul li svg.wpp path {
+  stroke: none;
   fill: var(--primary-color);
 }
 
@@ -1003,12 +990,13 @@ footer .social-links {
     display: flex;
   }
 
-  nav#navigation .social-links svg path {
+  nav#navigation ul.social-links li svg path {
     stroke: var(--primary-color);
   }
 
-  nav#navigation .social-links svg path {
-    stroke: var(--primary-color);
+  nav#navigation ul.social-links li:nth-child(2) svg path{
+    stroke: none;
+    fill: var(--primary-color);
   }
 
   section {
