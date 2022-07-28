@@ -1,6 +1,7 @@
 //GLIDER.JS INITIALIZER
 
- var slider =  new Glider(document.querySelector('.glider'), {
+window.addEventListener('load', function () {
+   var slider = new Glider(document.querySelector('.glider'), {
       slidesToShow: 1,
       slidesToScroll: 1,
       scrollLock: true,
@@ -9,51 +10,52 @@
       dragVelocity: 1.5,
       duration: 3,
       arrows: {
-        prev: '.glider-prev',
-        next: '.glider-next'
+         prev: '.glider-prev',
+         next: '.glider-next'
       }
-    });
+   });
+})
 
-    //GLIDER.JS AUTOPLAY
+//GLIDER.JS AUTOPLAY
 
-    slideAutoPlay(slider, '#home .col-b');
+slideAutoPlay(slider, '#home .col-b');
 
-    function slideAutoPlay(glider, selector, delay = 5000, repeat = true) {
-        let autoplay = null;
-        const slidesCount = glider.track.childElementCount;
-        let nextIndex = 1;
-        let pause = true;
-    
-        function slide() {
-            autoplay = setInterval(() => {
-                if (nextIndex >= slidesCount) {
-                    if (!repeat) {
-                        clearInterval(autoplay);
-                    } else {
-                        nextIndex = 0;
-                    }
-                }
-                glider.scrollItem(nextIndex++);
-            }, delay);
-        }
-    
-        slide();
-    
-        var element = document.querySelector(selector);
-        element.addEventListener('mouseover', (event) => {
-            if (pause) {
-                clearInterval(autoplay);
-                pause = false;
+function slideAutoPlay(glider, selector, delay = 5000, repeat = true) {
+   let autoplay = null;
+   const slidesCount = glider.track.childElementCount;
+   let nextIndex = 1;
+   let pause = true;
+
+   function slide() {
+      autoplay = setInterval(() => {
+         if (nextIndex >= slidesCount) {
+            if (!repeat) {
+               clearInterval(autoplay);
+            } else {
+               nextIndex = 0;
             }
-        }, 300);
-    
-        element.addEventListener('mouseout', (event) => {
-            if (!pause) {
-                slide();
-                pause = true;
-            }
-        }, 300);
-    }
+         }
+         glider.scrollItem(nextIndex++);
+      }, delay);
+   }
+
+   slide();
+
+   var element = document.querySelector(selector);
+   element.addEventListener('mouseover', (event) => {
+      if (pause) {
+         clearInterval(autoplay);
+         pause = false;
+      }
+   }, 300);
+
+   element.addEventListener('mouseout', (event) => {
+      if (!pause) {
+         slide();
+         pause = true;
+      }
+   }, 300);
+}
 
 //TO CHECK WHICH SECTION YOU ARE IN
 window.addEventListener('scroll', onScroll)
@@ -161,25 +163,25 @@ let barArray = Array.from(bar)
 
 let elemStyle = window.getComputedStyle(bar[2], null).getPropertyValue("display")
 
-if (elemStyle == 'none'){
+if (elemStyle == 'none') {
    barArray.pop()
 }
 
-let arrows = [arrow[0],arrow[1]]
+let arrows = [arrow[0], arrow[1]]
 
 let i = 1
-function prev(){
-   if(i <= 1) i = barArray.length + 1
+function prev() {
+   if (i <= 1) i = barArray.length + 1
    i--;
-   return setCard(0)  
+   return setCard(0)
 }
 
-function next(){
-   if(i >= barArray.length) i = 0
+function next() {
+   if (i >= barArray.length) i = 0
    i++;
    return setCard(1)
 }
 
-function setCard(num){
+function setCard(num) {
    return arrows[num].setAttribute('for', `sec${i}`)
 }

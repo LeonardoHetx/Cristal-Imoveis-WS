@@ -10,22 +10,13 @@
 
 :root {
   --hue: 353;
-  --hue-s: 355;
   --primary-color: hsl(var(--hue), 87%, 37%);
   --secondary-color: hsl(var(--hue), 46%, 32%);
 
-  --headline: hsl(calc(var(--hue) - 10), 14%, 97%);
   --paragraph: hsl(calc(var(--hue) - 10), 14%, 97%);
   --brand-beige: #fceda8;
-  --brand-light: #212121;
-  --brand-light-2: hsl(calc(var(--hue) - 10), 14%, 97%);
+  --brand-light: #323232;
   --brand-hover: hsl(var(--hue), 100%, 14%);
-  --bg-light: #212121;
-  --bg-gradient: linear-gradient(
-    151deg,
-    rgb(42, 45, 50) 0%,
-    rgba(25, 28, 34, 1) 100%
-  );
 
   --nav-height: 7.2rem;
   font-size: 62.5%;
@@ -73,8 +64,8 @@ body {
   font-size: 1.6rem;
   text-align: center;
   overflow: overlay;
-  color: var(--headline);
-  background-color: var(--bg-light);
+  color: var(--paragraph);
+  background-color: var(--brand-light);
 }
 
 ul {
@@ -109,13 +100,13 @@ section header h4:hover:not(#first) {
 section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
-  color: var(--headline);
+  color: var(--paragraph);
   margin-bottom: 6rem;
 }
 
 section header h1 {
   font-size: 3.4rem;
-  color: var(--headline);
+  color: var(--paragraph);
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
@@ -226,7 +217,7 @@ nav .close-menu {
 
 nav {
   box-sizing: border-box;
-  background: var(--headline);
+  background: var(--paragraph);
 }
 
 nav button.open-menu path {
@@ -330,8 +321,6 @@ body.menu-expanded button path {
   content: '';
   width: 100%;
   height: 95rem;
-  background: var(--bg-gradient);
-  background-size: cover;
   display: block;
   position: absolute;
   top: 0;
@@ -373,10 +362,10 @@ body.menu-expanded button path {
   top: 28%;
   left: 0;
   transform: translateY(-50%);
-  padding: 2.5rem 0 2.5rem 0;
+  padding: 2.5rem 0 2.5rem 3rem;
   height: 13rem;
   width: 130%;
-  background-color: var(--headline);
+  background-color: var(--paragraph);
   border-radius: 1.5rem;
   box-sizing: border-box;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -385,16 +374,17 @@ body.menu-expanded button path {
 
 #home .search .row {
   display: flex;
-  text-align: center;
 }
 
 #home .search .row .option {
   display: flex;
   flex-direction: column;
   flex: 1;
+  align-items: center;
   position: relative;
   padding-top: 0.5rem;
   line-height: 3rem;
+  text-align: left;
 }
 
 #home .search .row .option:not(:last-child)::before {
@@ -403,22 +393,19 @@ body.menu-expanded button path {
   background-size: 15px;
   background-repeat: no-repeat;
   position: absolute;
-  right: 20%;
-  top: 16%;
+  left: 7%;
+  top: 63%;
   width: 20px;
   height: 20px;
 }
 
-#home .search .row .option:nth-child(1)::before {
-  right: -16%;
-}
-
+#home .search .row .option:nth-child(2)::before,
 #home .search .row .option:nth-child(3)::before {
-  right: 60%;
+  left: 27%;
 }
 
 #home .search .row span {
-  color: var(--bg-light);
+  color: var(--brand-light);
   font-size: 2rem;
   font-weight: 600;
 }
@@ -430,28 +417,17 @@ body.menu-expanded button path {
   font-size: 1.6rem;
   font-weight: 500;
   color: #949494;
-  margin: auto;
-  width: 100%;
+  margin-block: auto;
+  margin-left: 3rem;
+  width: 80%;
   background-color: transparent;
   appearance: none;
-  text-align: center;
-}
-
-#home .search .row .option:nth-child(1) {
-  text-align: right;
-}
-
-#home .search .row .option:nth-child(1) select {
-  padding-left: 2.5rem;
-}
-
-#home .search .row .option:nth-child(2) select {
-  padding-left: 2rem;
-}
-
-#home .search .row .option:nth-child(3) select,
-#home .search .row .option:nth-child(3) {
   text-align: left;
+}
+
+#home .search .row .option:nth-child(2) select,
+#home .search .row .option:nth-child(3) select {
+  margin-left: 11.5rem;
 }
 
 #home .search .row .option:last-child {
@@ -528,6 +504,26 @@ body.menu-expanded button path {
   flex-wrap: wrap;
 }
 
+.properties_img-box{
+  position: relative;
+
+  height: 30.5rem;
+}
+
+.properties_img-box ul{
+  position: absolute;
+  width: 100%;
+  background-color: var(--primary-color);
+  bottom: 1%;
+}
+
+.properties_img-box ul li{
+  border: solid red;
+  width: 100;
+  position: absolute;
+  left: 0;
+}
+
 .properties_img{
   width: 34rem;
   height: 30rem;
@@ -535,7 +531,41 @@ body.menu-expanded button path {
   transition: .3s;
 }
 
-.properties_img:hover{
+#properties svg{
+  width: 3rem; 
+}
+
+#properties svg path{
+  fill: var(--paragraph);
+}
+
+/*==== .RENTED START ============================================ */
+
+.properties_img.rented{
+  filter: grayscale(100%);
+}
+
+article{
+  position: relative;
+}
+
+article.rented::before{
+  content: 'Alugado';
+  width: 34rem;
+  height: 3rem;
+  background-color: var(--primary-color);
+  line-height: 3rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*==== .RENTED END ============================================ */
+
+#properties .properties_img:hover{
   opacity: 0.5;
   cursor: pointer;
 }
@@ -544,12 +574,9 @@ body.menu-expanded button path {
   margin-bottom: 5rem;
 }
 
-#properties svg{
-  width: 3rem; 
-}
-
-#properties svg path{
-  fill: white;
+#properties .properties_info{
+  margin-top: 1.2rem;
+  background-color: var(--brand-light);
 }
 
 /*==== SERVICES ============================================ */
@@ -570,7 +597,7 @@ body.menu-expanded button path {
 
 #services .box-card {
   position: relative;
-  border: 2px solid var(--headline);
+  border: 2px solid var(--paragraph);
   cursor: pointer;
 }
 
@@ -583,7 +610,7 @@ body.menu-expanded button path {
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background-color: var(--bg-light);
+  background-color: var(--brand-light);
   opacity: 1;
   transition: .4s
 }
@@ -627,8 +654,8 @@ body.menu-expanded button path {
 
 #services .card span svg path,
 #services .card span svg polygon{
-  fill: var(--headline);
-  stroke: var(--headline);
+  fill: var(--paragraph);
+  stroke: var(--paragraph);
   transition: .3s;
 }
 
@@ -636,6 +663,10 @@ body.menu-expanded button path {
 #services .box-card:hover .card span svg polygon{
   fill: var(--primary-color);
   stroke: var(--primary-color);
+}
+
+#services .box-card .card span svg line{
+  stroke: var(--brand-light);
 }
 
 #services .card h3 {
@@ -719,7 +750,7 @@ body.menu-expanded button path {
 #contact ul li a,
 #contact ul li {
   text-decoration: none;
-  color: var(--headline);
+  color: var(--paragraph);
   transition: background-color 0.4s;
   padding-inline: 1rem;
   border-radius: 2rem;
@@ -746,7 +777,7 @@ footer .logo img {
 }
 
 footer p {
-  color: var(--headline);
+  color: var(--paragraph);
   line-height: 2;
   margin-bottom: 3.2rem;
 }
