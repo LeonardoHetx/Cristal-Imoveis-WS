@@ -744,7 +744,7 @@ article.rented::before{
   stroke: var(--primary-color);
 }
 
-#contact ul li svg.wpp path {
+#contact ul li svg.phone path {
   stroke: none;
   fill: var(--primary-color);
 }
