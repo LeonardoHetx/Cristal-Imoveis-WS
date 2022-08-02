@@ -163,7 +163,7 @@ function modalClick(img) {
    var modalB = document.getElementById("btnClose")
 
    navigation.style.display = "none"
-   openMenu()
+   document.body.style.overflowY = "hidden"
 
 
    modalW.style.display = 'block'
@@ -171,7 +171,7 @@ function modalClick(img) {
    modalB.onclick = function () {
       modalW.style.display = 'none'
 
-      navigation.style.display = "initial"
-      closeMenu()
+      navigation.style.display = "block"
+      document.body.style.overflowY = "auto"
    }
 }

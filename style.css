@@ -490,8 +490,8 @@ body.menu-expanded button path {
   height: 12rem;
   display: inline-block;
   position: absolute;
-  right: -2rem;
-  bottom: 5.5rem;
+  right: -3%;
+  bottom: 4%;
   border-right: 3px solid var(--primary-color);
   border-bottom: 3px solid var(--secondary-color);
 }
@@ -526,10 +526,14 @@ body.menu-expanded button path {
 }
 
 #modalImg{
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   width: 100%;
-  max-width: 40rem;
+  max-width: 70rem;
+  height: 50rem;
 }
 
 #btnClose{
