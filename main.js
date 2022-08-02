@@ -127,7 +127,7 @@ function closeMenu() {
    document.body.classList.remove('menu-expanded')
 }
 
-//SCROLL REVEAL API
+//SCROLL REVEAL
 
 ScrollReveal({
    origin: 'left',
@@ -154,3 +154,24 @@ ScrollReveal({
    #about .content img,
    #contact header,
    #contact .content`)
+
+//MODAL WINDOW
+
+function modalClick(img) {
+   var modalW = document.getElementById("modalWindow")
+   var modalI = document.getElementById("modalImg")
+   var modalB = document.getElementById("btnClose")
+
+   navigation.style.display = "none"
+   openMenu()
+
+
+   modalW.style.display = 'block'
+   modalI.src = img
+   modalB.onclick = function () {
+      modalW.style.display = 'none'
+
+      navigation.style.display = "initial"
+      closeMenu()
+   }
+}

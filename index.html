@@ -148,9 +148,9 @@
       </header>
       <div class="properties_container">
         <div>
-          <article class="rented">
+          <article>
             <img src="assets/backgrounds/light-home-background.png" alt="Imóvel imagem"
-                class="properties_img rented">
+                class="properties_img" onclick="modalClick('assets/backgrounds/light-home-background.png')">
               <div class="properties_data">
                 <h2 class="properties_price">
                   <span>R$</span>66,356
@@ -244,7 +244,6 @@
           </article>
         </div>
       </div>
-
     </div>
   </section>
   <section id="services">
@@ -478,6 +477,10 @@
       </div>
     </div>
   </footer>
+  <div id="modalWindow">
+    <span id="btnClose">X</span>
+    <img src="" alt="" id="modalImg">
+  </div>
   <a id="wppButton" href="https://linktr.ee/cristalimoveisararangua" target="_blank">
     <svg class="wpp-logo" width="50" height="50" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
