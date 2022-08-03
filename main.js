@@ -1,7 +1,7 @@
-//GLIDER.JS INITIALIZER
+//#HOME GLIDER.JS INITIALIZER
 
 window.addEventListener('DOMContentLoaded', function () {
-   var slider = new Glider(document.querySelector('.glider'), {
+   var slider = new Glider(document.querySelector('.glider-home'), {
       slidesToShow: 1,
       slidesToScroll: 1,
       scrollLock: true,
@@ -15,11 +15,9 @@ window.addEventListener('DOMContentLoaded', function () {
       }
    });
 
-
    //GLIDER.JS AUTOPLAY
 
    slideAutoPlay(slider, '#home .col-b');
-
 
    function slideAutoPlay(glider, selector, delay = 5000, repeat = true) {
       let autoplay = null;
@@ -175,3 +173,21 @@ function modalClick(img) {
       document.body.style.overflowY = "auto"
    }
 }
+
+//#PROPERTIES GLIDER.JS INITIALIZER
+
+window.addEventListener('DOMContentLoaded', function () {
+   new Glider(document.querySelector('.glider-prop'), {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      scrollLock: true,
+      scrollLockDelay: 100,
+      draggable: true,
+      dragVelocity: 1.5,
+      duration: 3,
+      arrows: {
+         prev: '.glider-prev',
+         next: '.glider-next'
+      }
+   });
+})

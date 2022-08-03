@@ -525,15 +525,27 @@ body.menu-expanded button path {
   overflow: auto;
 }
 
-#modalImg{
+ .col-glider {
+  width: 100%;
+  max-width: 80rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: block;
+  margin: auto;
+}
+
+ .col-glider img {
   width: 100%;
-  max-width: 70rem;
-  height: 100%;
+  max-width: 80rem;
+  max-height: 50rem;
+  display: block;
+  margin-inline: auto;
+  object-position: initial;
+}
+
+.col-glider .glider {
+  overflow: hidden;
 }
 
 #btnClose{
@@ -544,6 +556,7 @@ body.menu-expanded button path {
   font-size: 4rem;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1000;
 }
 
 
