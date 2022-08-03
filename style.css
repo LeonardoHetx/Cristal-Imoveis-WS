@@ -533,7 +533,7 @@ body.menu-expanded button path {
   display: block;
   width: 100%;
   max-width: 70rem;
-  height: 50rem;
+  height: 100%;
 }
 
 #btnClose{
