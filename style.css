@@ -491,7 +491,7 @@ body.menu-expanded button path {
   display: inline-block;
   position: absolute;
   right: -3%;
-  bottom: 4%;
+  bottom: 7%;
   border-right: 3px solid var(--primary-color);
   border-bottom: 3px solid var(--secondary-color);
 }
